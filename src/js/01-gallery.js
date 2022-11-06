@@ -19,7 +19,7 @@ const createGallery = (element) => {
 
 galleryItems.forEach(createGallery);
 
-// const lightBox = new SimpleLightbox(".gallery a", {
-//   captionsData: "alt",
-//   captionDelay: 250,
-// });
+const lightBox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
