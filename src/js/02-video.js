@@ -1,12 +1,12 @@
 import Player from '@vimeo/player';
 import { save, load } from './storage';
-const throttle = require('lodash.throttle');
+import throttle from 'lodash/throttle';
 
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 const videoTime = localStorage.getItem('videoplayer-current-time');
 
-const videoTimeUpdate = throttle((event) => {
+const videoTimeUpdate = throttle(event => {
   const saveVidetoTime = save('videoplayer-current-time', event.seconds);
 }, 1000);
 
